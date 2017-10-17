@@ -1,0 +1,12 @@
+<%= link_to("<< back to posts", posts_path)%><br />
+<h1 class="">All Advertisement</h1>
+<%=link_to("Create new Advertisement",new_advertisement_path) %>
+<% @advertisements.each do |advertisement| %>
+  <div class="media">
+    <div class="media-body">
+      <h4 class="media-heading">
+        <%= link_to advertisement.title, advertisement%>
+      </h4>
+    </div>
+  </div>
+<% end %>
