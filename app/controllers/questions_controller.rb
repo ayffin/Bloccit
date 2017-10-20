@@ -1,15 +1,7 @@
 class QuestionsController < ApplicationController
   def index
     @questions = Question.all
-    @questions.each { |question|
-      if question.resolved == true
-        checkmark = "\u2713"
-        puts checkmark.encode('utf-8')
 
-       else
-          # &#10060;
-        end
-    }
   end
 
   def new

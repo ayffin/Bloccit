@@ -12,9 +12,8 @@
       <%= f.text_area :body, class: "form-control", placeolder: "Enter post body"%>
     </div>
     <div class="form-group">
-      <%= f.label :resolved, class: 'checkbox' do%>
-      <%= f.check_box :resolved%> Resolved
-      <% end %>
+      <%= f.label :resolved%>
+      <%= f.check_box :resolved%>
     </div>
     <div class="form-group">
       <%= f.submit "Submit", class: "btn btn-success" %>
