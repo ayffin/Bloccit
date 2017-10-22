@@ -22,4 +22,10 @@ module RandomData
       words.shuffle!
       words[0,rand(3..8)].join
     end
+
+    def self.random_number
+      numbers = (1..9).to_a
+      numbers.shuffle!
+      numbers[0,rand(3..8)].join.to_i
+    end
   end
