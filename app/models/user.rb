@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   before_save { self.email = email.downcase if email.present? }
+  before_save {self.name = capitalize(name) if name.present? }
   validates :name, length: { minimum: 1}, presence: true
 
   validates :password, presence: true, length: { minimum: 6 }, if: "password_digest.nil?"
@@ -10,4 +11,10 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
 
   has_secure_password
+
+  private
+
+  def capitalize(name)
+    name.split(' ').map { |e| e.capitalize }.join(' ')
+  end
 end
