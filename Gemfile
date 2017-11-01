@@ -7,6 +7,7 @@ source 'https://rubygems.org'
 
  # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
  gem 'rails', '~> 5.1.2'
+ gem 'figaro', '1.0'
 
  # #1
  group :production do
