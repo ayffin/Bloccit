@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>your are following "<%= @post.title%>" and will receive updates when it's commented .</h1>
+    <p>
+      <%= @post.body%>
+    </p>
+    <p>
+      <%= link_to "View post on site", topic_post_url(@post.topic, @post)%>
+    </p>
+  </body>
+</html>
