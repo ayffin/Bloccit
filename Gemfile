@@ -39,7 +39,7 @@ source 'https://rubygems.org'
  gem 'thor', '0.19.1'
  gem "bootstrap-sass"
  gem "bcrypt"
-
+ gem 'factory_girl_rails', '~> 4.0'
  group :development do
    gem 'listen', '~> 3.0.5'
  end

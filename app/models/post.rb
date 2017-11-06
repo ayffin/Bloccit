@@ -29,4 +29,6 @@ class Post < ApplicationRecord
       new_rank = points + age_in_days
       update_attribute(:rank, new_rank)
     end
+
+    scope :visible_to, ->(user){ user ? all : joins(:topic).where('topics.public' => true)}
  end
